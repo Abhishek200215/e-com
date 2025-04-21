@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSmart | Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo" onclick="window.location.href='index.html';">ShopSmart</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li><a href="contactabout.htm">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Page -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="about">
+      <h3>About ShopSmart</h3>
+      <p>ShopSmart is your one-stop online shop for all things trendy and cool. We offer the best quality products at affordable prices. Our goal is to provide you with an amazing shopping experience, from browsing to checkout.</p>
+      <p>Founded in 2020, we've grown from a small startup to one of the most trusted online retailers in the region. Our team is dedicated to bringing you the latest products with exceptional customer service.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ShopSmart. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Contact form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      // Here you would typically send this data to a server
+      // For this example, we'll just show an alert
+      alert(`Thank you for your message, ${name}! We'll get back to you at ${email} soon.`);
+      
+      // Reset the form
+      this.reset();
+    });
+  </script>
+</body>
+</html>

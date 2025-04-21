@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSmart | Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo" onclick="window.location.href='index.html';">ShopSmart</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+          <li><a href="contactabout.htm">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cart Page -->
+  <section class="cart">
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-summary">
+      <h3>Total: ₹<span id="total-price">0.00</span></h3>
+      <button id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ShopSmart. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
